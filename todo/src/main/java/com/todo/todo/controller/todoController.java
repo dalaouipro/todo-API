@@ -13,11 +13,11 @@ public class todoController {
     @Autowired
     TodoService todoService;
 
-    @GetMapping("/listTodos")
+    @PostMapping("/listTodos")
     public List<Todo> listTodos() {
         return todoService.findAll();
     }
-    @GetMapping("/findTodo")
+    @PostMapping("/findTodo")
     public Todo findTodo(@RequestBody long id) {
         return todoService.findById(id).get();
     }
