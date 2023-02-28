@@ -13,19 +13,9 @@ public class TodoService {
     @Autowired
     TodoRepository todoRepository;
 
-    public List<Todo> findAll() {
-        System.out.println(todoRepository.findAll());
-        return todoRepository.findAll();}
-    public Optional<Todo> findById(long id) {
-        return todoRepository.findById(id);
-    }
-    public List<Todo> findByTitle(String title) {
-        return todoRepository.findByTitle(title);
-    }
-    public void save (Todo todo) {
-        todoRepository.save(todo);
-    }
-    public void delete (Todo todo) {
-        todoRepository.delete(todo);
-    }
+    public List<Todo> findAll() {return todoRepository.findAll();}
+    public Optional<Todo> findById(int id) {return todoRepository.findById(id);}
+    public List<Todo> findByTitle(String title) {return todoRepository.findByTitle(title);}
+    public void save (Todo todo) {todoRepository.save(todo);}
+    public void delete (Todo todo) {todoRepository.delete(todo);}
 }
